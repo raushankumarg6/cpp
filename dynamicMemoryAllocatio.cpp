@@ -11,16 +11,18 @@ and deallocate memory whenever we need it and whenever we don’t need it anymor
 There are many cases where this flexibility helps. Examples of such cases are Linked List, Tree, etc
 
 C uses: malloc,calloc, free() 
+  
 C++: new, delete
-Syntax to use new operator
+Syntax to use new operator:
 pointer-variable = new data-type;
 // Combine declaration of pointer 
 // and their assignment
 int *p = new int; 
-
 int* p = new int(25);
 float* q = new float(75.25);
-
+ // freed the allocated memory
+    delete p;
+ 
 Allocate a block of memory: a new operator is also used to allocate a block(an array) of memory of type data type. 
 
 pointer-variable = new data-type[size];
@@ -32,6 +34,10 @@ int *p = new int[10];
  
     if (!q)
         cout << "allocation of memory failed\n";
+
+   // freed the block of allocated memory
+    delete[] q;
+
 
 // In c:
 
